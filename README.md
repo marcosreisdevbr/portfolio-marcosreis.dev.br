@@ -11,7 +11,7 @@ O projeto foi desenvolvido utilizando o WordPress como CMS (sistema de gerenciam
 
 ## Funcionalidades
 
->- Interface amigável para apresentar meus projetos pessoais, de cursos e freelances.
+>- Interface amigável para apresentar meus projetos pessoais, de cursos e freelancers.
 >- Responsivo e otimizado.
 >- Sem uso de plugins construtores como Elementor e Gutenberg.
 
