@@ -1,0 +1,968 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: crimson;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: darkgray; 
+}
+
+body{
+	overflow-x:hidden;
+}
+
+/* NAV BAR STYLING */ 
+
+.navbar{
+	position: fixed;
+	width:100%;
+	padding: 15px 0px;
+	font-family:'Ubuntu', sans-serif;
+	transition: all 0.4s ease;
+	z-index:999;
+}
+
+@media(max-width:768px){
+	.navbar.sticky{
+	padding:0px;	
+}
+}
+
+.navbar.sticky{
+	padding: 10px 0px;
+	background-color: crimson;
+}
+
+.max-width{	
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: 0 auto !important;	
+	width: 100vw;
+}
+
+#home .max-width{
+		display:table;
+}
+
+.navbar .max-width{
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.navbar .logo a{
+	text-decoration:none;
+	color:#fff;
+	font-size: 35px;
+	font-weight:600;
+}
+
+.navbar .logo a span{
+	color:crimson;
+}
+
+.navbar .logo a:hover{
+	text-decoration:none;
+}
+
+.navbar .menu li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:18px;
+	font-weight:500;
+	margin-left:25px;
+	transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+	color: crimson;
+	text-decoration:none;
+}
+
+.navbar.sticky .logo a span{
+	color:#fff;
+	transition: color 0.3s ease;
+}
+
+.navbar .menu li{	
+	list-style:none;
+	display:inline-block;
+}
+
+.navbar.sticky .menu li a:hover{
+	color: #fff;	
+}
+
+/* menu btn styling */
+.menu-btn{
+	color:#fff;
+	font-size:23px;
+	cursor: pointer;
+	display:none;
+}
+
+/* home section atyling */
+
+#home{
+	display:flex;
+	background-attachment:fixed !important;
+	background:url('https://marcosreis.dev.br/wp-content/uploads/2022/01/banner-final.jpg') no-repeat center;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+ 	 background-size: cover;
+	height:100vh;
+	max-height:1080px;
+	min-height:500px;
+	color:#fff;
+	font-family:'Ubuntu',sans-serif;
+}
+
+#row{
+	height:100vh;
+	max-height:1080px;
+}
+
+.home .max-width .row i{
+	font-size:15em;
+	color:crimson;
+}
+
+@media(min-width:1200px){
+	.home .max-width .row i{
+	font-size:25em;	
+ }
+}
+
+.home .home-content .text-1{
+	font-size:27px;
+}
+.home .home-content .text-2{
+	font-size:4.375rem;
+	font-weight:600;
+	margin-left:-3px;
+	margin: -20px 0;
+}
+.home .home-content .text-3{
+	font-size:40px;
+	margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+	color: crimson;
+	font-weight:500;
+}
+
+.home .home-content a{
+	text-decoration:none;
+	display:inline-block;
+	background:crimson;
+	color:#fff;
+	font-size:25px;
+	padding: 10px 30px;
+	margin-top:20px;
+	border-radius:6px;
+	border: 2px solid crimson;
+}
+
+.home .home-content a:hover{
+	background:none;
+	color:crimson;
+	transition: all 0.4s ease;
+}
+
+/*about section styling */
+
+section.about{
+	padding:0px 50px;
+}
+
+.about, .services, .skills, .portfolio, .contact{
+	font-family:'Poppins',sans-serif;	
+}
+
+.about .title{
+	position:relative;
+	text-align:center;
+	font-size:40px;
+	font-weight:500;
+	padding:20px;
+	font-family:'Ubuntu',sans-serif;
+}
+
+.about .title::before{
+	content:"";	
+	position:absolute;
+	bottom: 0px;
+	left:50%;
+	width:200px;
+	height:3px;
+	background-color:#111;
+	transform: translateX(-50%);
+}
+
+.about .title::after{
+	content:"Quem sou eu";	
+	position:absolute;
+	bottom:-13px;
+	left:50%;
+	font-size:18px;
+	padding:5px;
+	color: crimson;	
+	background-color:#fff;
+	transform: translateX(-50%);
+}
+
+.about .about-content, .services .serv-content, .skills .skills-content, .portfolio .carousel .contact .contact-content{	
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-top:3em;
+}
+
+.about .about-content .left{
+/* 	width: 45%; */
+}
+
+.about .about-content .right{
+/* 	width: 55%; */
+}
+
+.about .about-content .right .text{
+	font-size:20px;
+	font-weight:600;
+	margin-bottom:10px;
+}
+
+.about .about-content .right .text span{
+	color:crimson;
+}
+
+.about .about-content .right p{
+	text-align:justify;
+}
+
+.about .about-content .right a, .portfolio .max-width a{
+	text-decoration:none;
+	display:inline-block;
+	background:crimson;
+	color:#fff;
+	font-size:20px;
+	font-weight:500;
+	padding: 5px 30px;
+	margin-top:20px;
+	border-radius:5px;
+	border: 2px solid crimson;
+}
+.about .about-content .right a:hover, .portfolio .max-width a:hover, .projects .content p a:hover{
+	background:none;
+	color:crimson;
+	transition: all 0.4s ease;
+}
+
+.projects .content p a{
+	border: 2px solid crimson;
+	border-radius: 5px;
+}
+
+.about .about-content .left img{
+	height: 100%;
+	max-height:450px;
+	width:100%;
+	max-width: 400px;
+	object-fit:cover;
+	border-radius:10px;
+}
+
+/* @media(max-width:425px){
+	.about .about-content .left img{
+	height:350px;
+	width:350px;
+	}
+} */
+
+
+#portfolio .title{
+	margin-bottom:25px;
+}
+
+/*Services Section Setyling */
+
+.services .title{		
+	position:relative;
+	text-align:center;
+	font-size:40px;
+	font-weight:500;
+	padding:20px;
+	font-family:'Ubuntu',sans-serif;
+}
+
+.services .title::before{
+	content:"";	
+	position:absolute;
+	bottom: 0px;
+	left:50%;
+	width:250px;
+	height:3px;
+	background-color:#fff;
+	transform: translateX(-50%);
+}
+
+.services .title::after{	
+	content:"O que eu posso fazer";		
+	position:absolute;
+	bottom:-14px;
+	left:50%;
+	width:190px;
+	font-size:18px;
+	padding:5px;
+	color: crimson;	
+	background:#111;	
+	transform: translateX(-50%);
+}
+
+.services{
+	color:#fff;
+	background:#111;
+}
+
+.services .serv-content .card{
+	width: calc(33% - 20px);
+	background:#222;
+	text-align:center;
+	border-radius:5px;
+	padding: 20px 25px;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.services .serv-content .card i{
+	font-size:50px;
+	color:crimson;
+}
+
+.services .serv-content .card:hover i{
+	transition: all 0.4s ease;
+	font-size:50px;
+	color:#fff;
+}
+
+.services .serv-content .card .text{
+		font-size:25px;
+		font-weight:500;
+		margin: 10px 0 7px 0;
+}
+
+.services .serv-content .card .box{
+	transition: all 0.4s ease;
+}
+
+.services .serv-content .card:hover{
+	background: crimson;
+}
+
+.services .serv-content .card:hover .box{
+	transform: scale(1.05);
+}
+
+/* Skills section Styling */
+
+.skills .title{		
+	position:relative;
+	text-align:center;
+	font-size:40px;
+	font-weight:500;
+	padding:20px;
+	font-family:'Ubuntu',sans-serif;
+}
+
+.skills .title::before{
+	content:"";	
+	position:absolute;
+	bottom: 0px;
+	left:50%;
+	width:210px;
+	height:3px;
+	background-color:#111;
+	transform: translateX(-50%);
+}
+
+.skills .title::after{	
+	content:"O que eu sei";		
+	position:absolute;
+	bottom:-14px;
+	left:50%;
+	font-size:20px;
+	padding:5px;
+	color: crimson;	
+	background:#fff;	
+	transform: translateX(-50%);
+}
+
+.skills .skills-content .column{
+	width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+	font-size:25px;
+	font-weight:600;
+	margin-bottom:10px;
+}
+
+.skills .skills-content .right .bars{
+	margin-bottom:10px;
+}
+
+.skills .skills-content .right .infor{
+	margin-bottom:5px;
+}
+
+.skills .skills-content .right .infor{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+.skills .skills-content .right span{
+	font-weight:500;
+	font-size:20px;
+	margin-bottom:-20px;
+}
+
+.skills .skills-content .left span{
+	display:block;
+	margin-bottom:0.4em;
+	text-align:justify;
+}
+
+.skills .skills-content .left .profiss{
+	color:crimson;
+}
+
+
+.skills .skills-content .right .line{
+	height:5px;
+	width:100%;
+	background:lightgray;
+	position:relative;
+}
+
+.skills .skills-content .right .line::before{
+	content:"";
+	position:absolute;
+	height:100%;	
+	left:0;
+	top:0;
+	background:crimson;
+}
+
+.skills .skills-content .right .html::before{
+	width:90%;
+}
+
+.skills .skills-content .right .css::before{
+	width:80%;
+}
+
+.skills .skills-content .right .bts::before{
+	width:80%;
+}
+
+.skills .skills-content .right .js::before{
+	width:50%;
+}
+
+.skills .skills-content .right .jquery::before{
+	width:40%;
+}
+
+.skills .skills-content .right .php::before{
+	width:40%;
+}
+
+.skills .skills-content .right .wp::before{
+	width:70%;
+}
+
+
+.skills .skills-content .right .ps::before{
+	width:70%;
+}
+
+
+.skills .skills-content .right .ai::before{
+	width:60%;
+}
+
+.skills .skills-content .right .bars .infor img{	
+	width:40px;
+	height:40px;
+	object-fit:cover;	
+}
+
+.skills .skills-content .right .bars .infor img:hover{
+	transform: scale(1.20);
+	transition: all 0.4s ease;
+}
+
+.skills .max-width .row .col-12 img{
+	width: 50px;
+	height:50px;
+	object-fit:cover;
+	margin-right:10px;
+}
+
+.skills .max-width .row .col-12{
+	border-radius:5px;
+	background-color:#111;
+	margin: 5px 0px;
+	padding:8px 5px;
+	transition: all 0.4s ease;
+}
+
+.skills .max-width .row .col-12:hover{	
+	background-color:crimson;
+}
+
+
+/*  portfolio section styling */
+
+.portfolio .title{		
+	position:relative;
+	text-align:center;
+	font-size:40px;
+	font-weight:500;
+	padding:20px;
+	font-family:'Ubuntu',sans-serif;
+}
+
+.portfolio .title::before{
+	content:"";	
+	position:absolute;
+	bottom: 0px;
+	left:50%;
+	width:155px;
+	height:3px;
+	background-color:#fff;
+	transform: translateX(-50%);
+}
+
+.portfolio .title::after{	
+	content:"& Projetos";		
+	position:absolute;
+	bottom:-14px;
+	left:50%;
+	font-size:20px;
+	padding:5px;
+	color: crimson;	
+	background:#111;	
+	transform: translateX(-50%);
+}
+
+.portfolio, .projects{
+	color:#fff;
+	background:#111;
+}
+
+.projects{
+	padding-top:5.2em;
+	font-family:'Poppins',sans-serif;
+}
+
+.projects .content .card,
+.portfolio .carousel .card{
+	background:#222;
+	border-radius:6px;
+	transition: all 0.3s ease;
+}
+
+.projects .content .card:hover,
+.portfolio .carousel .card:hover{
+	background:crimson;
+}
+
+.projects .content .card .text, .projects .content .card p,
+.portfolio .carousel .card .text, .portfolio .carousel .card p{
+		padding:5px 10px;
+		text-align:center;
+}
+
+.projects .content .card p span,
+.portfolio .carousel .card p span{
+	display: inline-block;
+	background: #000;
+	padding:2px 5px;
+	margin: 5px 2px;
+	border-radius:5px;
+}
+.projects .content p,
+.portfolio .carousel .content p{
+	text-align:center !important;
+}
+
+.projects .content p a,
+.portfolio .carousel .content p a{
+	padding: 3px 5px;
+	font-size: 15px;
+}
+
+.projects .content .card a img,
+.portfolio .carousel .card a img{
+	width:100%;
+	height:auto;
+	object-fit:cover;
+	border: 3px solid crimson;	
+}
+
+.projects .content .card img,
+.portfolio .carousel .card img{
+	width:100%;
+	height:auto;
+	object-fit:cover;
+	border: 3px solid crimson;	
+}
+
+.projects .content p a{
+	display:inline-block;
+	text-decoration:none;
+	color: #fff;
+	font-weight:normal;
+	transition: all 0.3s ease;
+	margin:5px 0px;
+	background-color: crimson;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* .projects .content p a:hover{
+	color:#fff;
+} */
+
+.portfolio .max-width .btn{
+	display:block;
+	text-align:center;
+}
+
+.owl-dots{
+	margin: 0 auto !important;	
+	text-align:center !important;
+	margin-top: 20px;
+}
+
+.owl-dot{
+	height:13px;
+	width:13px;
+	margin: 0 5px;
+	outline:none!important;
+	border-radius:50%;
+	border:2px solid crimson !important;
+	transition: all 0.3s ease
+}
+
+.owl-dot.active{
+	width: 25px;
+	border-radius:14px;
+}
+
+.owl-dot.active, 
+.owl-dot:hover{
+	background-color: crimson !important;
+}
+
+/* footer contact styling */
+.contact .title{		
+	position:relative;
+	text-align:center;
+	font-size:40px;
+	font-weight:500;
+	padding:20px;
+	font-family:'Ubuntu',sans-serif;
+}
+
+.contact .title::before{
+	content:"";	
+	position:absolute;
+	bottom: 0px;
+	left:50%;
+	width:370px;
+	height:3px;
+	background-color:#111;
+	transform: translateX(-50%);
+}
+
+.contact .title::after{		
+	content:"Como posso ajudar ?";		
+	position:absolute;
+	bottom:-14px;
+	left:50%;
+	font-size:20px;
+	padding:5px;
+	color: crimson;	
+	background:#fff;	
+	width:200px;
+	transform: translateX(-50%);	
+}
+
+.contact .title {
+	margin-bottom:1em;
+}
+
+
+@media(min-width:992px){
+.contact .contact-content .column{
+	width: calc(50% - 30px);
+}
+
+}
+
+.contact .contact-content .left .text{
+	font-size:20px;
+	font-weight:600;
+	margin-bottom:10px 0px;
+}
+
+.contact .contact-content .left .icons{
+	margin: 10px;
+}
+
+.contact .contact-content .left p{
+	text-align:justify;
+}
+
+.contact .contact-content .line{
+	display:flex;
+	height:65px;
+	align-items:center;
+}
+
+.contact .contact-content .line .info{
+	margin-left:20px;
+}
+
+.contact .contact-content .line i{
+	font-size:30px;
+	color: crimson;
+}
+
+.contact .contact-content .info .head{
+	font-weight:500;
+}
+
+.contact .contact-content .info .sub-title{
+	color:#333;
+}
+
+.range{
+	background:#111;
+}
+
+.range .container-fluid .row span{
+	color:crimson;
+}
+
+/* Contact fomr styling */
+
+.submit{
+	background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 30px;    
+    border-radius: 5px;
+    border: 2px solid crimson;
+}
+
+.submit:hover{
+	background: none;
+    color: crimson;
+    transition: all 0.4s ease;
+}
+
+.textarea{
+	max-height:100px;
+}
+
+#social .col-12 i{
+	margin: 5px 10px;
+	font-size: 30px;
+    color: crimson;
+}
+
+
+
+/* Responsive media query start */
+
+@media(max-width:1120px){
+/* 	.about .about-content .column{
+		width:50%;
+	} */
+
+	.about .about-content .left{
+		display:flex;
+		justify-content:center;
+		margin: 0 auto 60px;
+	}
+
+	.about .about-content .right{
+		flex:100%;
+	}
+	
+	.max-width{
+		max-width: 900px;
+	}
+	
+	.services .serv-content .card{
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+	}
+
+	.skills .skills-content .column{
+		width: 100%;
+	}
+	
+	.skills .skills-content .right{
+		padding-top:2em;
+	}	
+}
+
+@media(max-width:768px){
+	.services .serv-content .card{
+		width:100%;		
+	}
+}
+
+@media (max-width:992px){
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+		
+	.menu-btn i.active::before{
+		content:"\f00d";
+	}
+	.navbar .menu{
+		position:fixed;
+		background:#111;
+		height:100vw;
+		width:100%;
+		left:-100%;
+		top:0;
+		text-align:center;
+		padding-top:50px;
+		transition: all 0.4s ease;
+	}
+	.navbar .menu.active{
+		left:0;
+	}
+	.navbar .menu li{		
+		display:block;
+	}
+	.navbar .menu li a{		
+		display:inline-block;
+		margin: 10px 0;
+		font-size:20px;
+	}
+	.home .home-content .text-2{
+	font-size:70px;	
+	}
+	.home .home-content .text-3{
+	font-size:30px;	
+	}
+}
+
+@media(min-width:992px){
+	#nav{
+	padding:0px;
+	margin:0px;
+	}
+}
+
+@media(max-width:425px){
+	
+	.contact .title::before{
+		width:250px;
+	}
+
+	section#about{
+		padding: 0 10px;
+	}
+	
+	.max-width{		
+		padding:10px;
+		width:90%;
+	}
+
+	.navbar .menu{
+		padding-top:50px;		
+	}
+	.home .home-content .text-2{
+	font-size:2.2rem;	
+	}
+	.home .home-content a{
+		font-size:20px;
+		padding: 8px 22px;
+	}
+}
+
+@media(max-width:375px){
+	.navbar .menu{
+		height:120vw;
+	}
+}
+
+.bannerProjetos{	
+	background-size: cover;
+    background-position: center;
+    border: 2px solid crimson;
+}
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader img {
+/*   width: 320px;
+  height: 170px; */
+  animation: resize 1.5s ease-in-out infinite;
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
