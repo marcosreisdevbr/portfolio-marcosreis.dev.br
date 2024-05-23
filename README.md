@@ -25,6 +25,7 @@ O projeto foi desenvolvido utilizando o WordPress como CMS (sistema de gerenciam
       <th> PHP </th>
       <th> Jquery </th>
       <th> Bootstrap </th>      
+      <th> WordPress </th>      
   </tr>
 </table>
 
